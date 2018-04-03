@@ -1,0 +1,2 @@
+
+(pale moon:9578): Gtk-CRITICAL **: IA__gtk_clipboard_set_with_data: assertion 'targets != NULL' failed

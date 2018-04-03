@@ -1,0 +1,9 @@
+#tuna{color:red;}
+
+.caterpillar{color:blue;}
+
+p[name='mike']{color:pink;}
+
+p[name^='bacon']{color:red;}
+
+p[name$='bacon']{color:green;}

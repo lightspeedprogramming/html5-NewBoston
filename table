@@ -1,0 +1,15 @@
+<html>
+<head>
+</head>
+<title>
+</title>
+<body>
+	<table border=”1” name=”mytable”>
+		<tr>
+			<td>Jeff</td>
+			<td>Jefferson</td>
+			<td>Pizza</td>
+		</tr>
+	</table>
+</body>
+</html>

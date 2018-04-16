@@ -1,0 +1,22 @@
+Table{
+	border: 3px solid black;
+	border-collapse: collapse;
+}
+
+th {
+	background-color: green;
+	color: solid black;
+}
+
+td {
+	background-color: blue;
+	color: red;
+	font: 24px bold Tahoma;
+	padding: 5px;
+}
+
+td:hover {
+	background-color: black;
+	color: yellow;
+	font: 24px bold Tahoma;
+}

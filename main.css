@@ -1,45 +1,46 @@
 *{
-	margin: 0px;
-	padding: 0px;
+	margin:0px;
+	padding:0px;
 }
-
 
 h1{
 	font: bold 20px Tahoma;
 }
 
-
 h2{
 	font: bold 14px Tahoma;
 }
-
-header, section, footer, aside, nav, article, hgroup {
+header, section, footer, aside, nav, article, hgroup{
 	display:block;
 }
 
 body{
-	text-align: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 #big_wrapper{
-	border: 1px solid black;
-	width: 1000px;
-	margin: 20px auto;
-	text-align: left;
+	max-width: 1000px;
+	margin: 20px 0px;
+	display: flex;
+	flex-direction: column;
 }
 
-#top_header {
+#top_header{
 	background: yellow;
-	border: 1px solid blue;
+	border: 3px solid black;
 	padding: 20px;
 }
 
-#top_menu {
+#top_menu{
+	border: red;
 	background: blue;
 	color: white;
 }
 
-#top_menu li {
+
+#top_menu li{
 	display: inline-block;
 	list-style: none;
 	padding: 5px;

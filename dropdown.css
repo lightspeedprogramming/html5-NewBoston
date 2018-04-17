@@ -1,0 +1,60 @@
+#top_nav li:hover ul {
+	display: block;
+}
+
+#top_nav {
+	display: block;
+	position: relative;
+	background-image: url(ubuntu.jpg);
+	/* background-color: #cccccc; */
+	background-color: black;
+	border:1px solid rgb(200,150,0);
+	font: bold 16px Sans-serif;
+	height:40px;
+	width:1000px;
+	margin:0px auto;
+}
+
+#top_nav ul {
+	margin:0px;
+	padding:0px;
+}
+
+#top_nav li {
+	position: relative;
+	float: left;
+	list-style-type: none;
+}
+
+#top_nav li  {
+	text-decoration: none;
+	display: block;
+	color: white;
+	border: 1px solid rgb(230, 100, 0);
+	padding: 10px 25px;
+}
+
+#top_nav ul:after{
+	content:".";
+	display: block;
+	height: 0px;
+	clear: both;
+	visibility: hidden;
+}
+
+#top_nav ul ul{
+	position: absolute;
+	display: none;
+	left: 0px;
+	color: black;
+	background-color: black;
+}
+
+#top_nav ul ul li {
+	border: 1px solid rgb(230,100,0);
+	font: bold 12px Sans-serif;
+}
+
+#top_nav ul ul li a {
+	border-right: none;
+}

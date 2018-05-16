@@ -1,0 +1,31 @@
+body {
+	text-align: center;
+}
+
+#box {
+	display: block;
+	width: 200px;
+	margin: 30px auto;
+	padding: 15px;
+	text-align: center;
+	border: 1px solid black;
+	background: linear-gradient(to top right,black 5%,white 95%);	
+	/* what actually does rounding */
+	border-radius: 25px;	/*higher value = more-rounded */
+	/* color offset(left/right) offset(up/down)*/ 
+	box-shadow: rgb(110,110,100) 4px 4px 8px; 
+}
+
+#box:active{
+	/* when clicked it becomes pressed (inset shadow) */
+	box-shadow: rgb(110,110,110) 4px 4px 8px inset;
+}
+
+#box:hover{
+	background:linear-gradient(to top right, black 15%, white 85%); 
+}
+
+#text {
+	font: bold 30px Tahoma;
+	text-shadow: rgb(110,110,110) 3px 3px 3px
+}

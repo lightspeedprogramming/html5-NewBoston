@@ -1,0 +1,47 @@
+.invisible {
+  display: none; /* Hide the input */
+}
+
+
+
+*[id^='check']:checked + label #box {
+  -webkit-transform: rotate(45deg);
+  transform: translate(200px);
+}
+
+
+#box {
+	margin-top: auto;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 60px;
+	margin-bottom: auto;
+	display: block;
+	width: 200px;
+	height: 60px;
+	margin: 20px auto;
+	padding: 10px;
+	border: 1px solid black;
+	background: linear-gradient(to top right,black 5%,white 95%);	
+	/* what actually does rounding */
+	border-radius: 25px;	/*higher value = more-rounded */
+	/* color offset(left/right) offset(up/down)*/ 
+	box-shadow: rgb(110,110,100) 4px 4px 8px; 
+	transition: box-shadow 2s, background 2s;
+	-moz-transition: box-shadow 1.5s, background 1.5s, transform 1.5s;
+}
+
+/*
+#box:active{
+	box-shadow: rgb(110,110,110) 4px 4px 8px inset;
+	transform: 200px;
+}*/
+
+#box:hover{
+	background:linear-gradient(to top right, black 15%, white 85%); 
+}
+
+#text {
+	font: bold 30px Tahoma;
+	text-shadow: rgb(110,110,110) 3px 3px 3px
+}

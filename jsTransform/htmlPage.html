@@ -1,0 +1,87 @@
+<html>
+<title>
+</title>
+<head>
+	<link rel="stylesheet" href="test.css"/>
+	<link rel="stylesheet" href="dropdown.css"/>
+	<script type="text/javascript">
+		function clicked(idArg){
+			var myElement = document.getElementById(idArg);
+			if (myElement.style.transform == "translate(250px, 0px)"){
+				myElement.style.transform = "translate(0px, 0px)";
+			} else {
+				myElement.style.transform = "translate(250px, 0px)";
+				var elements = document.getElementsByClassName("selectableBox");
+				for(var i=0; i<elements.length; i++) {
+					if (myElement != elements[i]) {
+						elements[i].style.transform = "translate(0px, 0px)";
+					}
+				}
+			}
+		}
+		function revealMenu(idArg){
+			var myElement = document.getElementById(idArg);
+			if (myElement.style.display == "block"){
+				myElement.style.display = "none";
+			} else {
+				myElement.style.display = "block";
+				var elements = document.getElementsByClassName("menuText");
+				for(var i=0; i<elements.length; i++) {
+					if (myElement != elements[i]) {
+						elements[i].style.display = "none";
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="top_nav">
+		<ul>
+			<li><a href="#">test2 </a></li>
+			<li><a href="#">test3 </a></li>
+			<li><a href="#">test4 </a>
+				<ul>
+					<li><a href="#">test</a></li>
+					<li><a href="#">test</a></li>
+					<li><a href="#">test</a></li>
+					<li><a href="#">test</a></li>
+				</ul>
+			</li>
+			<li><a href="#">test</a></li>
+		</ul>
+	</div>
+
+
+	<div id="box1" class = "selectableBox">
+		<p onClick="clicked('box1'); setTimeout(revealMenu('menu1'), 1000);">testBox</p>
+		<div id="menu1" class="menuText">
+			the caterpillar ran fast
+			<br>
+			look how fast he ran
+			<br>
+			can you believe it?
+		</div>
+	</div>
+	<div id="box2" class = "selectableBox">
+		<p onClick="clicked('box2'); setTimeout(revealMenu('menu2'), 1000);">testBox</p>
+		<div id="menu2" class="menuText">
+			the caterpillar ran fast
+			<br>
+			look how fast he ran
+			<br>
+			can you believe it?
+		</div>
+	</div>
+	<div id="box3" class = "selectableBox">
+		<p onClick="clicked('box3'); setTimeout(revealMenu('menu3'), 1000);">testBox</p>
+		<div id="menu3" class="menuText">
+			the caterpillar ran fast
+			<br>
+			look how fast he ran
+			<br>
+			can you believe it?
+		</div>
+	</div>
+</body>
+</html>

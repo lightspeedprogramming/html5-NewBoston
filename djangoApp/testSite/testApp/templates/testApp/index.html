@@ -1,0 +1,81 @@
+<html>
+<title>
+	Great Site
+</title>
+<head>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/test.css' %}"/>
+
+	<script type="text/javascript">
+		function clicked(idArg){
+			var myElement = document.getElementById(idArg);
+			if (myElement.hasAttribute("activated")){
+				//do nothing
+			} else {
+				myElement.setAttribute("activated", "false");
+			}
+			if (myElement.activated == "true"){
+				myElement.style.transform = "translate(0px,0px)";
+				myElement.style.opacity = "0.6";
+				myElement.activated = "false";
+			} else {
+				//document.write(myElement.attributes["horizOrder"].value);
+				var horizTranslate = (5 - myElement.attributes["horizOrder"].value) * 200;
+				//document.write(horizTranslate);
+				myElement.style.transform = "translate(" + horizTranslate.toString() + "px,0px)";
+				myElement.style.opacity = "1.0";
+				myElement.activated = "true";
+				var elements = document.getElementsByClassName("selectableBox");
+				for(var i=0; i<elements.length; i++) {
+					if (myElement != elements[i]) {
+						elements[i].style.transform = "translate(0px,0px)";
+						elements[i].style.opacity = "0.7";
+						myElement.activated = "false";
+					}
+				}
+			}
+		}
+		function revealMenu(idArg){
+			var myElement = document.getElementById(idArg);
+			if (myElement.style.display == "block"){
+				myElement.style.display = "none";
+			} else {
+				myElement.style.display = "block";
+				var elements = document.getElementsByClassName("menuText");
+				for(var i=0; i<elements.length; i++) {
+					if (myElement != elements[i]) {
+						elements[i].style.display = "none";
+					}
+				}
+			}
+		}
+		function setHorizOrder(idArg, order) {
+			var myElement = document.getElementById(idArg);
+			myElement.setAttribute("horizOrder", order);
+		}
+	</script>
+
+</head>
+
+<body>
+	{% for group, groupMachines in groupDict.items %}
+		<div class="groupLabel">
+			Group: {{ group }}
+		</div>
+		{% for  machine in groupMachines  %}
+			<div id='{{ machine }}' class = "selectableBox" onClick="clicked('{{ machine }}'); setTimeout(revealMenu('{{ machine }}Menu'), 1000);"  horizOrder={{forloop.counter}}>
+				<p>{{machine.name}}</p>
+				<div id="{{ machine }}Menu" class="menuText">
+					<b>Architecture:</b>     {{machine.architecture}}
+					<br><b>currently running:</b>     runlevel2
+					<br><b>Reboot:</b>     True
+					<br><b>start_time:</b>     20:48:00
+					<br><b>estimated_runtome:</b>     1:30:00
+					<br><b>job loaded:</b>     Full_Turn
+				</div>
+			</div>
+		{% endfor %}
+		<br><br><br><br><br><br>
+	{% endfor %}
+</body>
+</html>

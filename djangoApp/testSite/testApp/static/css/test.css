@@ -4,6 +4,7 @@ body {
 
 div.selectableBox {
 	display: block;
+	float: left;
 	margin: 20px;
 	height: 60px;
 	border: 2px solid gray;
@@ -28,11 +29,23 @@ div.selectableBox {
 
 .selectableBox .menuText {
 	color: white;
+	text-align: left;
+	padding: 5px;
 	display: none;
+	height: 250px;
+	width: 300px;
 	border: 1px solid black;
-	background: rgb(150,150,200);
+	background: rgb(150,200,200);
 	transform: translate(150px, 0px);
 	border-radius: 10px;
 	box-shadow: rgb(100,100,100) 2px 2px 4px;
 	opacity: 0.7;
+}
+
+.groupLabel {
+	color: white;
+	display: block;
+	background: rgb(55,55,55);
+	margin: auto;
+	border: 1px solid black;
 }
